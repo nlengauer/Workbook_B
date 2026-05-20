@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+ <title>Full-Screen Gibberish Wireframe</title>
+  <style>
+    html, body {
+      margin: 2px;
+      padding: 2%;
+      width: 105%;
+      height: 100%;
+      overflow: scroll;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: none;
+      scroll-snap-align: start;
+    }
+   #bg-gif {
+  position: fixed;
+  opacity: 55%;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  object-position: center;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.gibberish {
+  position: relative;
+  z-index: 1;
+}
+    
+    #cursor {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+    }
+    .trail-particle {
+    position: fixed;
+    pointer-events: none;
+    animation: fade-out 2s forwards;
+    font-size: 20px; /* Adjust size as needed */
+    color: #ff0000; /* Or use a random color if preferred */
+    font-family: Arial, sans-serif; /* Or a symbol-friendly font */
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    }
+    @keyframes fade-out {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    .gibberish {
+      font-size: 30pt;
+      font-family: 'Press Start 2P', cursive;
+      color: #494949;
+      line-height: 0.9;
+      text-align: justify;
+      white-space: pre-wrap;
+      width: 100%;
+      height: 100%;
+      overflow: clip;
+    }
+    .highlight {
+      display: inline;
+      transition: transform 0.1s ease, color 0.1s ease;      
+      text-decoration: none;
+      color: inherit;    }
+    .highlight:hover {
+      transform: scale(1.2);
+      color: #ff1cc2;
+      text-shadow: none; 
+    }
+  </style>
+</head>
+<body>
+  <img id="bg-gif" src="MAIN_1.gif" alt="Background GIF" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+  <div id="cursor"></div>
+  <div class="gibberish">
+    WORKBOOK A
+    <a href="RESEARCH.html" class="highlight">RESEARCH</a>
+    <a href="DEVELOPMENT.html" class="highlight">DEVELOPMENT</a>
+    <a href="INTERACTIVITIES.html" class="highlight">INTERACTIVITIES</a>
+
+
+
+    
+    WORKBOOK B
+    <a href="RESEARCH_2.html" class="highlight">RESEARCH</a>
+    <a href="Development_2.html" class="highlight">DEVELOPMENT</a>
+    <a href="Interactivities_2.html" class="highlight">INTERACTIVITIES</a>
+  </div>
+  <script>
+  const cursor = document.getElementById('cursor');
+  const colors = ['FF0000', '#E34234', '#DC143C', '#8B0000', '#EE4B2B', '#C41E3A', '#FF3131', '#800000'];
+  const glyphs = ['★', '✦', '✧', '✩'];
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  
+  const particle = document.createElement('div');
+  particle.className = 'trail-particle';
+  const size = Math.random() * 12 + 10;
+  particle.style.fontSize = size + 'px';
+  particle.style.left = e.clientX + 'px';
+  particle.style.top = e.clientY + 'px';
+  particle.style.color = colors[Math.floor(Math.random() * colors.length)]; 
+  particle.textContent = glyphs[Math.floor(Math.random() * glyphs.length)]; 
+  
+  document.body.appendChild(particle);
+  
+  setTimeout(() => {
+    particle.remove();
+  }, 2000);
+});
+  
+  </script>
+</body>
+</html>

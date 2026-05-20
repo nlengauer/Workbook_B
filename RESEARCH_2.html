@@ -3,23 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-
   <title>Nina Lengauer</title>
   <style>
     html, body {
+      margin: 0;
+      box-sizing: border-box;
       font-family: Helvetica, sans-serif;
       text-align: left;
       background: url("polka_dots4.png") center center / cover no-repeat fixed;
       background-color: #ffed24;
       padding: 30px;
-      margin-top: -25px;
-      margin-left: 0%;
-    
+      width: 100%;
     }
     h1 {
       color: #5b0101;
@@ -29,59 +27,106 @@
       margin-top: 20px;
     }
 
-      h2 {
+    h2 {
       color: #5b0101;
-      font-family:Arial, Helvetica, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 30px;
       text-align: center;
       padding: 20px;
       margin-top: 10px;
-      }
+    }
+
     p {
-       font-size: 18px;
+      font-size: 18px;
       font-family: Arial, Helvetica, sans-serif;
       padding-left: 20px;
       color: #5b0101;
     }
 
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-  .gallery-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 10px;
-    border-radius: 8px;
-  }
+    .gallery-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 10px;
+      border-radius: 8px;
+    }
 
-  .gallery-item img {
-    max-width: 475px;
-    height: auto;
-    display: block;
-  }
+    .gallery-item img {
+      max-width: 475px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-  .gallery-item .textbox {
-    min-width: 240px;
-    max-width: 800px;
-    padding: 10px;
-    background: transparent;
-    border: 1px transparent;
-    border-radius: 8px;
-    color: #5b0101;
-    line-height: 1.4;
-  }
+    .gallery-item .textbox {
+      min-width: 240px;
+      max-width: 800px;
+      padding: 10px;
+      background: transparent;
+      border: 1px transparent;
+      border-radius: 8px;
+      color: #5b0101;
+      line-height: 1.4;
+    }
 
-  .gallery-item video {
-    max-width: 475px;
-    height: auto;
-    display: block;
-    
-  }
+    .gallery-item video {
+      max-width: 475px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 28px;
+        padding: 10px;
+      }
+
+      h2 {
+        font-size: 20px;
+        padding: 10px;
+      }
+
+      p {
+        font-size: 15px;
+        padding-left: 10px;
+      }
+
+      .gallery-item {
+        flex-direction: column;
+      }
+
+      .gallery-item img,
+      .gallery-item video {
+        max-width: 100%;
+      }
+
+      .gallery-item .textbox {
+        min-width: unset;
+        max-width: 100%;
+      }
+
+      .nav {
+        flex-direction: column;
+      }
+    }
 
   </style>
 </head>
@@ -93,21 +138,18 @@
   <div class="gallery">
     <div class="gallery-item">
       <img src="Research_1.png" alt="Research 1">
-    </img>
       <div class="textbox">Researcher, engineer, and artist Urbonas has created a remarkably impactful website showcasing his various projects in their various and distinct forms. The three column scroll for the various
 dissections of information are intuitive and work seamlessly with one another. At the top there are
 circles which act as dials, responding to the sections of information found down in the column. These
-circles act like dials which echo Urbonas’ space interests and become shortcuts to easily finding
+circles act like dials which echo Urbonas' space interests and become shortcuts to easily finding
 information. He has clearly thought about the UI of the webpage. The tilted text in each body text seen also in the positioning of the text create the feeling of sinking deeper into the page with each
 scroll. The design and layout of the information make the long sections of text engaging and is
 inspiration for my webpage development, as even the black text on white background are made
 interesting.</div>
     </div>
 
-    <div class="gallery">
     <div class="gallery-item">
-      <img src="R2.png" alt="Research 1">
-    </img>
+      <img src="R2.png" alt="Research 2">
       <div class="textbox">This website revolutionised my idea of what a restaurant and its menu can be shaped as. This New York Sichuan restaurant has been designed as a website which invites viewers to engage and interact
 with the information presented. The menu transforms into a piece of art with images to click on for
 further information concerning the health of each dish and ingredient. The design is reminiscent of nostalgia of Chinese and American cinematic, digital and analogue media. The swipes and transitions
@@ -116,34 +158,27 @@ my own web design. Transforming something as simple as a menu pushes the imagina
 html files. I really liked how immersive the experience is just by clicking around. </div>
     </div>
 
-
-    <div class="gallery">
     <div class="gallery-item">
-      <img src="R3.png" alt="Research 1">
-    </img>
+      <img src="R3.png" alt="Research 3">
       <div class="textbox">This website, while simple in nature and without masses of information, is an engaging and effective
 way in which a book has been advertised and sold to consumers. The cover page immediately sets humourous and playful tone, and when one clicks the options on the left side bar, a paper sound
 effect is played. The user can then drag and drop the page around and stack the new information each click, making the site a really immersive and engaging page. For a while I thought I might want
-to do something with sound effects such as this, however I realised it didn’t really go with my page’s
-final execution. It works here, however I didn’t want to add something that might seem too juvenile be too amusing. </div>
+to do something with sound effects such as this, however I realised it didn't really go with my page's
+final execution. It works here, however I didn't want to add something that might seem too juvenile be too amusing. </div>
     </div>
 
-
-        <div class="gallery">
     <div class="gallery-item">
-      <img src="R4.png" alt="Research 1">
-    </img>
-      <div class="textbox">This website acts as the catalogue for the Rhode Island School of Design’s Graphic Design Masters
-program in 2023. The website is laid out like a board game where the user has to (or should) visit the squares that include someone’s artwork or a list of graduates with links to their portfolios and
+      <img src="R4.png" alt="Research 4">
+      <div class="textbox">This website acts as the catalogue for the Rhode Island School of Design's Graphic Design Masters
+program in 2023. The website is laid out like a board game where the user has to (or should) visit the squares that include someone's artwork or a list of graduates with links to their portfolios and
 personal websites. I often come back to this website if I need inspiration for my own webpage
 designs, or for considerations for my portfolio as there are over a dozen students to look at with
 varying designs and styles. The specialised cursor, the list of how many spaces one has visited, and
 the moving graphics make this website super engaging and interactive. </div>
     </div>
-
+  </div>
 
   <a href="index.html">Back</a>
 
 </body>
 </html>
-

@@ -68,8 +68,22 @@
       color: #ab0091;
     }
 
-     
-    
+      .gallery {
+      display: flex;
+      overflow-x: clip;
+      padding-left: 5px;
+      padding-right: 5px;
+      scrollbar-width: none;
+      gap: 0.7rem;
+      padding-bottom: 0.1rem;
+      scroll-snap-type: x mandatory;
+      scroll-snap-type: y mandatory;
+    }
+    .gallery > * {
+      flex: 0 0 148px;
+      aspect-ratio: auto;
+      scroll-snap-align: start;
+    }
 
   </style>
 </head>

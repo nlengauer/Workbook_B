@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <title>Nina Lengauer</title>
+  <style>
+
+.gallery {
+  column-count: 3;
+  column-gap: 5rem;
+}
+.gallery > * {
+  width: 100%;
+  margin-bottom: 5rem;
+  break-inside: avoid;
+}
+.gallery > *:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+    html, body {
+      font-family: Helvetica, sans-serif; FONT-FAMILY: 'Press Start 2P', cursive;
+      text-align: left;
+      background-color: #007013;
+      background: url("polka_dots6.png") center center / cover no-repeat fixed;
+      padding: 30px;
+      margin-top: -25px;
+      margin-left: 0%;
+    
+    
+    }
+    h1 {
+      color: #ab0091;
+      font-family:Press Start 2P, cursive;
+      font-size: 60px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: #ab0091;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    p {
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-left: 20px;
+      color: #ab0091;
+    }
+
+    .gallery {
+      display: flex;
+      overflow-x: clip;
+      padding-left: 5px;
+      padding-right: 5px;
+      scrollbar-width: none;
+      gap: 0.7rem;
+      padding-bottom: 0.1rem;
+      scroll-snap-type: x mandatory;
+      scroll-snap-type: y mandatory;
+    }
+    .gallery > * {
+      flex: 0 0 148px;
+      aspect-ratio: auto;
+      scroll-snap-align: start;
+    }
+
+  .board-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .board-container .small-image {
+    width: 200px;
+    height: auto;
+  }
+
+    .board-container-2 .small-image {
+    width: 200px;
+    height: auto;
+  }
+  .small-board {
+    display: block;
+    animation: floatBoard 10s ease-in-out infinite;
+    animation-delay: 1.5s;
+    transform-origin: center;
+  }
+
+  .moving-board {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    animation: floatBoard 8s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes floatBoard {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-12px) rotate(-1deg); }
+    50% { transform: translateY(4px) rotate(0.5deg); }
+    75% { transform: translateY(-8px) rotate(-0.5deg); }
+  }
+  </style>
+</head>
+<body>
+  <h1>Final Project ★</h1>
+
+  <div class="gallery-item">
+   <p>This is the stage of the final project we are currently working on.
+    The beanie will include all of the components we explored during class, such as:
+    motion sensors, LEDs connected by conductive wiring, speakers and more.
+    There will be soundscapes that we will have created which will play when the PIR sensors detect movement.
+    The biggest consideration at the moment in the safety and construction of the beanie so that the wires stay on the breadboard and noone's hair sets of fire.
+    But at this stage we are progressing well.</p>
+ </div>
+
+  <div class="gallery">
+    <img src="InteractiveBeanie.png" alt="Interactive Beanie">
+  </div>
+
+
+</body>
+</html>
+
+  <a href="index.html">Back</a>
+
+
+</div>

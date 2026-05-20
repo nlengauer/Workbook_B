@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+  <title>Nina Lengauer</title>
+  <style>
+    html, body {
+      font-family: Helvetica, sans-serif;
+      text-align: left;
+      background: url("polka_dots2.png") center center / cover no-repeat fixed;
+      background-color: #ffed24;
+      padding: 30px;
+      margin-top: -25px;
+      margin-left: 0%;
+    
+    }
+    h1 {
+      color: #5b0101;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 60px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+      h2 {
+      color: #5b0101;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 10px;
+      }
+
+    p {
+      font-size: 18px;
+      padding-left: 20px;
+      color: #5b0101;
+    }
+
+    a {
+      color: #5b0101;
+      font-family:'arial', Helvetica, sans-serif;
+      font-size: 17px;
+      padding: 0px;
+    }
+
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gallery-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .gallery-item img {
+    max-width: 475px;
+    height: auto;
+    display: block;
+  }
+
+  .gallery-item .textbox {
+    min-width: 240px;
+    max-width: 800px;
+    padding: 10px;
+    background: transparent;
+    border: 1px transparent;
+    border-radius: 8px;
+    color: #5b0101;
+    line-height: 1.4;
+  }
+
+  .gallery-item img {
+    cursor: pointer;
+  }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.0);
+    padding: 2rem;
+    z-index: 1000;
+  }
+
+  .lightbox.active {
+    display: flex;
+  }
+
+  .lightbox img {
+    max-width: 85%;
+    max-height: 85%;
+    width: auto;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.0);
+    background: white;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #5b0101;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.0);
+  }
+
+  video {
+  box-shadow: none;
+  background: transparent;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Development ★</h1>
+  <h2> Landing Page</h2>
+  
+  <div class="gallery">
+  <div class="gallery-item">
+    <img src="Landing_Page_Dev2.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">I knew I wanted to make the landing page different to the one in Workbook A, to try and display my more intricate knowledge of VSCode.
+      I wanted to make it more minimal and maybe less playful, not quite serious but a step away from the colourful, fun vibe in the original.
+      So I tried just making the background white, or one solid colour. (forgot to take screenshot before moving on hence why background GIF included here).
+    </div>
+  </div>
+  <div class="gallery-item">
+    <img src="Landing_Page_Dev1.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">Then I tried playing with text colour, and for whatever reason I chose some of the most illegible colours so that obviously didn't stick.
+    </div>
+  </div>
+  <div class="gallery-item">
+    <img src="Landing_Page_Dev3.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">Then I tried playing with text on websites such as <a href="https://type.constraint.systems/" target="_blank">type.constraint.systems</a> to see if I could use something like this for the homepage options.
+    </div>
+  </div>
+   <div class="gallery-item">
+    <img src="Landing_Page_Dev4.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">Here is another version of this (again with the very illegible colour) and I liked the approach, but I thought it didn't quite suit the context of the home page. So I abandoned this idea.
+    </div>
+  </div>
+
+
+   <div class="gallery-item">
+    <video src="ascii-art.mp4" alt="Description" height="315px" width="475px" controls>
+    </video>
+    <div class="textbox">The next step then became to explore ideas of movement and background animations and move away from the text, to see if I could come up with something new through this different route.
+      In my spare time I started exploring ASCII animation through websites that make it for myself such as <a href="https://grainrad.com/" target="_blank">grainrad.com</a> which had the webcam attached so I could make videos of myself in the ASCII format.
+      I thought this video of me waving could be a fun addition to the homepage, however decided against it as it was not really my work, and I did not want my face anywhere - even if in glyphs and digits.
+    </div>
+  </div>
+   <div class="gallery-item">
+    <video src="star_Draft.mp4" alt="Description" height="315px" width="475px" controls>
+    </video>
+    <div class="textbox">I then attempted my own take on ASCII animation in Adobe After Effects, which for whatever reason was quite complicated. Thus when I developed this one GIF, I thought I should use it for something after spending two hours on it.
+      This gif is a simple rotating star which uses numbers to determine shadows and light, and I really enjoyed the digital and analogue vibe it gives off on the landing page behing my text.
+    </div>
+  </div>
+   <div class="gallery-item">
+    <img src="MAIN_1.gif" alt="Description" height="315px" width="475px" controls>
+   </img>
+    <div class="textbox">I then removed the black background and turned it into a GIF. I put it on the landing page and I enjoy that the animation used was created by me too.
+      A good way to use my random side projects for uni assignments.
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <img src="Final_Landing_Page.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">My next step was to find the right font and styling for my landing page. So I just went onto Google Fonts to find one I liked and landed on 'Press Start 2P' which I thought suited the pixelated, explicit digital vibe of this assignment.
+    </div>
+  </div>
+   <div class="gallery-item">
+    <img src="Final_Cursor.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">I wanted to keep the cursor in the same vein as the original landing page, however making the glyphs all shades of red made it seem more focused and less totally playful.
+    </div>
+  </div>
+
+   <div class="gallery-item">
+    <img src="Polka_Dots6.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">Rather than solid colour, I wanted to create my own backgrounds to each of the pages, so I created simple Photoshop images with different colours so create a continuous backgrounds throughout and made entirely by me.
+    </div>
+  </div>
+
+  <h2>★ The Code ★
+  </h2>
+  
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="Stitch_1_optimized_.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">Moving through my development of code, I copied most of the basics from the original workbook pages therefore a lot of the document is developed the same way.
+      Developments for me were focused on having more user interactions, clicks, hovers, lightboxes, videos et al were key for me to develop.
+      
+    </div>
+  </div>
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="Stitch_1_optimized_.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">This was my code for the cursor I had wanted when I asked Stitch to make it for me in class. 
+      I copied that code into VSCode and edited the colours, size, opacity within VSCode to suit the exact idea I had envisioned.
+      This was one of the first things I had done for this project. The reason why I decided to keep the stitch code mostly as it was, 
+      was due to the fact that when I searched for the same help on W3 Schools, or with a Google search, the same code elements came up: which I took to suggest
+      that while Stitch made it too easy and accessible for me, it would have been possible for me to create a replica of the final design.
+    </div>
+  </div>
+  <div class="gallery-item">
+    <img src="Code_VSCODE_Cursor_optimized_.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">This is the final code for the cursor. When I tried to replicate it on my other pages,
+      such as this one, it didn't transfer as expected. I suspect it is to do with some typos and style issues in the bottom section, which I didn't have enough time to adjust. </div>
+  </div>
+  <div class="gallery-item">
+    <img src="Hover_1_optimized_.png" alt="Description" height="315px" width="475px">
+    <div class="textbox"> My hover design was concieved from simple google searches. A mostly easy process, I was happy to see that it worked in the way I imagined.
+      I had originally wanted the text to be in different fonts, yet didn't have enough time, however I think the hover is still effective.
+    </div>
+  </div>
+  <div class="gallery-item">
+    <img src="First_Draft_Landing_Page_optimized_.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">This was the first iteration of the landing page, before I knew how to clip it to the screen. 
+      I hated the way in which the bottom line of text appeared.
+    </div>
+  </div>
+  <div class="gallery-item">
+    <img src="Background_Animation_optimized_.png" alt="Description" height="315px" width="475px">
+    <div class="textbox">For the changing colours, I had asked the co-pilot to make it change the background from white to black.
+      Once I had seen the original block of code, I continued to add and change the colours until I landed on what it is now.
+    </div>
+  </div>
+  <div class="gallery-item">
+    <img src="Horizontal_Scroll_optimized_.png" alt="Description" height="315px" width="475px">
+    <div class="textbox"> I had always known I wanted a horizontal scroll, again so that there was something slightly more interactive that a regular gallery (like this page, ew!).
+      So for this I used the GitHub <a href="https://karenanndonnachie.github.io/VCA_INTERACTIVEMEDIA/CHEATSHEETS/gallery_builder.html" target="_blank">cheat sheet CSS code</a>, which was actually quite hard for me to wrap my head around.
+      All the images I uploaded were too big and if they were well sized, there was a large gap in the scroll box.
+      However, once I realised you can just change whatever - you just need to know the right words - I was able to adjust image height and width, remove the scroll bar, and set aspect ration to auto.
+    </div>
+  </div>
+   <div class="gallery-item">
+    <img src="Masonry_Gallery_optimized_.png" alt="Description" height="315px" width="475px">
+    <div class="textbox"> I did the exact same with this page. Just with the 1 colomn Masonry Gallery option.
+    </div>
+  </div>
+   <div class="gallery-item">
+    <img src="Final_words_optimized_.png" alt="Description" height="315px" width="475px">
+    <div class="textbox"> There are still some things I would change and bugs (such as when clicking to go back to the landing page, 
+      for whatever reason the page doesn't snap to the left like it is meant to). And I would love to keep adding changes in cursors and moving objects to the pages.
+
+    </div>
+  </div>
+  
+ 
+  <!-- ... -->
+</div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close enlarged image">×</button>
+    <img id="lightbox-img" alt="Enlarged image">
+  </div>
+
+  <a href="index.html">Back</a>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.gallery-item img').forEach(image => {
+      image.addEventListener('click', () => {
+        lightboxImg.src = image.src;
+        lightboxImg.alt = image.alt || 'Enlarged image';
+        lightbox.classList.add('active');
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    lightbox.addEventListener('click', event => {
+      if (event.target === lightbox) {
+        lightbox.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
+
+ 

@@ -4,24 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
   <title>Nina Lengauer</title>
   <style>
-  html, body {
-      font-family: Helvetica, sans-serif; FONT-FAMILY: 'Press Start 2P', cursive;
+    html, body {
+      margin: 0;
+      box-sizing: border-box;
+      width: 100%;
+      font-family: Helvetica, sans-serif;
       text-align: left;
       background-color: #00ff2a;
       background: url("polka_dots3.png") center center / cover no-repeat fixed;
       padding: 30px;
-      margin-top: -25px;
-      margin-left: 0%;
-    
-    
     }
+
     h1 {
       color: #ab0091;
-      font-family:Press Start 2P, cursive;
+      font-family: 'Press Start 2P', cursive;
       font-size: 60px;
       padding: 20px;
       margin-top: 20px;
@@ -29,12 +29,13 @@
 
     h2 {
       color: #ab0091;
-      font-family:Arial, Helvetica, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 30px;
       text-align: center;
       padding: 20px;
       margin-top: 10px;
     }
+
     p {
       font-size: 18px;
       font-family: Arial, Helvetica, sans-serif;
@@ -42,103 +43,97 @@
       color: #ab0091;
     }
 
-.gallery {
-  column-count: 3;
-  column-gap: 5rem;
-}
-.gallery > * {
-  width: 100%;
-  margin-bottom: 5rem;
-  break-inside: avoid;
-}
-.gallery > *:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s;
-  cursor: pointer;
-}
-
-    .gallery {
+    .board-container {
       display: flex;
-      overflow-x: clip;
-      padding-left: 5px;
-      padding-right: 5px;
-      scrollbar-width: none;
-      gap: 0.7rem;
-      padding-bottom: 0.1rem;
-      scroll-snap-type: x mandatory;
-      scroll-snap-type: y mandatory;
-    }
-    .gallery > * {
-      flex: 0 0 148px;
-      aspect-ratio: auto;
-      scroll-snap-align: start;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-  .board-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+    .board-container .small-image {
+      width: 200px;
+      height: auto;
+    }
 
-  .board-container .small-image {
-    width: 200px;
-    height: auto;
-  }
+    .small-board {
+      display: block;
+      animation: floatBoard 10s ease-in-out infinite;
+      animation-delay: 1.5s;
+      transform-origin: center;
+    }
 
-    .board-container-2 .small-image {
-    width: 200px;
-    height: auto;
-  }
-  .small-board {
-    display: block;
-    animation: floatBoard 10s ease-in-out infinite;
-    animation-delay: 1.5s;
-    transform-origin: center;
-  }
+    .moving-board {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      animation: floatBoard 8s ease-in-out infinite;
+      transform-origin: center;
+    }
 
-  .moving-board {
-    width: 100%;
-    max-width: 800px;
-    display: block;
-    animation: floatBoard 8s ease-in-out infinite;
-    transform-origin: center;
-  }
+    @keyframes floatBoard {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      25% { transform: translateY(-12px) rotate(-1deg); }
+      50% { transform: translateY(4px) rotate(0.5deg); }
+      75% { transform: translateY(-8px) rotate(-0.5deg); }
+    }
 
-  @keyframes floatBoard {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-12px) rotate(-1deg); }
-    50% { transform: translateY(4px) rotate(0.5deg); }
-    75% { transform: translateY(-8px) rotate(-0.5deg); }
-  }
+    a.back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: #ab0091;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 28px;
+        padding: 10px;
+      }
+
+      h2 {
+        font-size: 20px;
+        padding: 10px;
+      }
+
+      p {
+        font-size: 15px;
+        padding-left: 10px;
+      }
+
+      .board-container {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .board-container .small-image {
+        width: 140px;
+      }
+
+      .moving-board {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>Interactivities ★</h1>
 
-
   <div class="board-container">
     <a href="p5js.html">
       <img class="small-image small-board" src="p5.js.png" alt="p5.js logo">
     </a>
-
     <a href="Ardiuno_Weeks.html">
       <img class="moving-board" src="Arduino_Board.png" alt="Arduino Board">
     </a>
-
     <a href="Final_Project.html">
       <img class="small-image small-board" src="InteractiveBeanie.png" alt="Interactive Beanie">
     </a>
   </div>
 
-
+  <a class="back-link" href="index.html">Back</a>
 
 </body>
 </html>
-
-  <a href="index.html">Back</a>
-
-
-</div>

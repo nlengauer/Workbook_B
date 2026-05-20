@@ -37,7 +37,7 @@
     html, body {
       font-family: Helvetica, sans-serif; FONT-FAMILY: 'Press Start 2P', cursive;
       text-align: left;
-      background-color: #007013;
+      background-color: #1bff41;
       background: url("polka_dots7.png") center center / cover no-repeat fixed;
       padding: 30px;
       margin-top: -25px;
@@ -68,42 +68,51 @@
       color: #ab0091;
     }
 
-      .gallery {
-      display: flex;
-      overflow-x: clip;
-      padding-left: 5px;
-      padding-right: 5px;
-      scrollbar-width: none;
-      gap: 0.7rem;
-      padding-bottom: 0.1rem;
-      scroll-snap-type: x mandatory;
-      scroll-snap-type: y mandatory;
+     .gallery {
+      column-count: 3;
+      column-gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
     }
-    .gallery > * {
-      flex: 0 0 148px;
-      aspect-ratio: auto;
-      scroll-snap-align: start;
+    .gallery-item {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 1.5rem;
+      break-inside: avoid;
     }
-
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    
   </style>
 </head>
 <body>
-  <h2>Creative Computing ★</h2>
+  <h2>★ Creative Computing ★</h2>
 
  <div class="gallery">
       <div class="gallery-item">
         <img src="PS.J5_1.png" alt="Week 1 at the TCS" height="275" width="415">
-        <p>Week 1 at the Telstra Creator Space. Lauren and I worked together to see if we could identify any parts found in the kit. We couldn't.</p>
+        <p>Class activity in Processing. I had a lot of fun and tried to bring in elements from my workbook into it (floating circles and a custom cursor).</p>
       </div>
 
       <div class="gallery-item">
         <img src="P5.JS_2.png" alt="Description" height="275" width="415">
-        <p>In the first experiment, we had fun plugging the wires and LEDs into the breadboard. Using rudimentary physics to aid our understanding of voltage and resistors.</p>
+        <p>Despite being a similar interface to VS Code, p5.js still took a while for me to feel familiar with. Having to think of new ways to define and 
+          shape what I wanted was interesting. It felt like learning a dialect of a language I already knew a little of.</p>
       </div>
 
       <div class="gallery-item">
         <img src="P5.JS_3.png" alt="Description" height="300" width="300">
-        <p>Week 2 at the Telstra Creator Space where we started playing with motion sensors which were connected to tiny speakers. The sound was horrendous but the task was really fun.</p>
+        <p>This was my self-portrait which I completed for the homework. Despite it being relatively simple, it took me a great deal of time and I watched a youtube tutorial to help start the process and
+          allow myself to get comfortable with interface and code.</p>
       </div>
 
   </body>
